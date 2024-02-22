@@ -1,0 +1,11 @@
+button.abort {
+    background-color: #e85656;
+    transition: background-color 250ms ease-out;
+    &:hover {
+        background-color: #da3030;
+    }
+    &:active {
+        transition: background-color 100ms ease-out;
+        background-color: #ff0000;
+    }
+}

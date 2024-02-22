@@ -1,0 +1,19 @@
+.tasks-leave-from,
+.tasks-enter-to {
+    transform: translateX(0%);
+    opacity: 100%;
+}
+.tasks-leave-to {
+    transform: translateX(-40%);
+    opacity: 0%;
+}
+.tasks-enter-from {
+    transform: translateX(40%);
+    opacity: 0%;
+}
+.tasks-move {
+    transition: all 450ms;
+}
+.tasks-leave-active,.tasks-enter-active {
+    transition: all 450ms ease-out;
+}

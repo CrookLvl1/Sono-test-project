@@ -1,0 +1,49 @@
+button.abort {
+    background-color: #e85656;
+    transition: all 250ms ease-out;
+    &:hover,
+    &:focus {
+        background-color: #da3030;
+    }
+
+    &:focus {
+        box-shadow: 0 0 10px 1px #da3030;
+    }
+
+    &:active {
+        transition: all 100ms ease-out;
+        background-color: #ff0000;
+    }
+}
+
+button.accept {
+    transition: all 250ms ease-out;
+    background-color: #00e900;
+
+    &:hover,
+    &:focus {
+        background-color: #00d200;
+    }
+
+    &:focus {
+        box-shadow: 0 0 10px 1px #00d200;
+    }
+
+    &:active {
+        transition: all 100ms linear;
+        background-color: #00af00;
+    }
+
+}
+
+button.round {
+    font-size: 26px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

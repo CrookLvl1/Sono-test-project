@@ -1,0 +1,187 @@
+.calendar-tasks-wrapper {
+    max-width: 1280px;
+    width: 400px;
+    min-width: 320px;
+    min-height: 468px;
+    margin: 3.5rem 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #cca26b;
+
+    @media (max-width: 768.75px) {
+        margin: 0;
+    }
+
+    @media (max-width: 468.75px) {
+        width: 100svw;
+        height: 100svh;
+    }
+
+    button.back {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        transform: rotate(180deg);
+        cursor: pointer;
+        position: absolute;
+        right: 0.25rem;
+        top: 0.25rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0 0 1rem;
+        max-width: 90%;
+    }
+
+    .tasks {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        > ul {
+            box-shadow: 0 0 5px 1px black;
+            border-radius: 12px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            overflow-y: auto;
+            box-sizing: border-box;
+
+            gap: 0.4rem;
+
+            > li {
+                font-size: 20px;
+                list-style: none;
+                padding: 0 0 0 1.5rem;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+
+                .buttons {
+                    display: flex;
+                    gap: 0.75rem;
+                }
+            }
+        }
+
+        > button {
+            margin: 1rem auto 0;
+            box-sizing: border-box;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            span {
+                height: 100%;
+            }
+        }
+    }
+
+    .add-task {
+        position: relative;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        input,
+        textarea {
+            box-shadow: 0 0 2px 1px black;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: box-shadow 250ms ease-out;
+            padding: 0.5rem;
+
+            &:focus,
+            &:active {
+                box-shadow: 0 0 10px 2px black;
+            }
+        }
+
+        > input {
+            max-width: 200px;
+        }
+
+        > textarea {
+            resize: none;
+            width: 200px;
+            height: 120px;
+        }
+
+        .select-time {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            > input {
+                text-align: center;
+                box-sizing: border-box;
+                width: 60px;
+                height: 40px;
+                font-size: 20px;
+                -webkit-appearance: textfield;
+                -moz-appearance: textfield;
+            }
+
+            > span {
+                font-size: 30px;
+            }
+        }
+
+        button.add {
+            box-sizing: border-box;
+            padding: 1rem;
+            font-size: 1rem;
+            width: 160px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    }
+
+    .watch-task {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .title {
+            font-size: 1.5rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        .description {
+            margin: 0;
+            font-size: 1rem;
+            height: 250px;
+            max-height: 250px;
+            max-width: 100%;
+            box-shadow: 0 0 5px 1px black;
+            letter-spacing: 0.2px;
+            line-height: 2rem;
+            border-radius: 12px;
+            padding: 1rem;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            overflow-y: auto;
+            white-space: pre-line
+        }
+
+        .time {
+            font-size: 1.75rem;
+            text-align: right;
+        }
+    }
+}
