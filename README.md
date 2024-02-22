@@ -34,7 +34,10 @@ bun run build
 ```
 ## Локальный deploy
 
+```
 node .output/server/index.mjs  
+```
+
 Сайт будет доступен по ссылке: localhost:YOURPORT/Sono-test-project
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
