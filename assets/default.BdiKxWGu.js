@@ -1,0 +1,1 @@
+import{_ as o,v as s,x as e,Y as a,t as r}from"./entry.IzOAQ1OH.js";const n={},c={class:"layout-wrapper"},l=e("header",null,"Header",-1),_=e("footer",null,"Footer",-1);function d(t,f){return r(),s("div",c,[l,e("main",null,[a(t.$slots,"default")]),_])}const i=o(n,[["render",d]]);export{i as default};
