@@ -17,7 +17,7 @@ yarn install
 # bun
 bun install
 ```
-##Соберите приложение
+## Сборка приложения
 
 ```bash
 # npm
@@ -32,7 +32,7 @@ yarn build
 # bun
 bun run build
 ```
-##Задеплойте приложение локально
+## Локальный deploy
 
 node .output/server/index.mjs  
 Сайт будет доступен по ссылке: localhost:YOURPORT/Sono-test-project
