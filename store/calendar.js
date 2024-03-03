@@ -7,7 +7,7 @@ export const useCalendarStore = defineStore('calendarStore', () => {
     const dayTitlesFull = Object.freeze(['Понедельник', 'Вторник', 'Среда', 'Четверг',
         'Пятница', 'Суббота', 'Воскресенье']);
 
-    const currentDate = Object.freeze(new Date());
+    const currentDate = new Date();
 
     const getDays = (month, year) => {
         switch (month) {
@@ -51,19 +51,18 @@ export const useCalendarStore = defineStore('calendarStore', () => {
 
         switch (action) {
             case 'add': {
-
-                if (!tasks[year])
+                if (!Object.hasOwn(tasks, year))
                     tasks[year] = {};
-                if (!tasks[year][month])
+                if (!Object.hasOwn(tasks[year], month))
                     tasks[year][month] = {}
-                if (!tasks[year][month][day])
+                if (!Object.hasOwn(tasks[year][month], day))
                     tasks[year][month][day] = [];
 
                 tasks[year][month][day].push(task);
                 break;
             }
             case 'remove': {
-                if (!(tasks[year] && tasks[year][month] && tasks[year][month][day])) return;
+                if (!(Object.hasOwn(tasks, year) && Object.hasOwn(tasks[year], month) && Object.hasOwn(tasks[year][month], day))) return;
                 const tasksArray = tasks[year][month][day];
 
                 const taskIndex = tasksArray.findIndex(checkingTask => checkingTask.id === task.id);

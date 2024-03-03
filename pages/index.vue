@@ -11,14 +11,15 @@
     </div>
 </template>
 
-<script setup>
+<script  setup>
 useHeadSafe({
-    title: 'Календарь', 'link': [
+    title: 'Календарь',
+    link: [
         { rel: 'icon', type: 'image/png', href: '/icon.png' }
     ]
 })
 const showTasks = ref(false);
-let dateArguments = shallowRef([]);
+const dateArguments = shallowRef([]);
 
 const daySelectedHandler = (...args) => {
     dateArguments.value = args;
@@ -28,7 +29,7 @@ const daySelectedHandler = (...args) => {
 const closeWindow = () => showTasks.value = false;
 
 </script>
-
+    
 <style lang="scss" scoped>
 @import'@/assets/scss/transitions/fade.scss';
 
